@@ -20,13 +20,16 @@ service: calc
 # Check out our docs for more details
 frameworkVersion: '2'
 
+custom:
+  stage: ${opt:stage, self:provider.stage}
+
 provider:
   name: aws
   runtime: python3.8
+  region: sa-east-1
 
 # you can overwrite defaults here
 #  stage: dev
-#  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
