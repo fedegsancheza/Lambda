@@ -20,9 +20,6 @@ service: calc
 # Check out our docs for more details
 frameworkVersion: '2'
 
-custom:
-  stage: ${opt:stage, self:provider.stage}
-
 provider:
   name: aws
   runtime: python3.8
