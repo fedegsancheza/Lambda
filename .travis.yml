@@ -14,7 +14,7 @@ install:
     - cd -
 script:
     - cd ${SERVICE_PATH}
-    - serverless deploy -s ${STAGE_NAME}
+    - serverless deploy -s prod
     - cd -
 environments:
   - &PRODUCTION_ENV
