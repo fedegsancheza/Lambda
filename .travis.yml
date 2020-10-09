@@ -14,7 +14,7 @@ install:
     - cd -
 script:
     - cd ${SERVICE_PATH}
-    - serverless deploy -s prod
+    - serverless deploy -s dev
     - cd -
 environments:
   - &PRODUCTION_ENV
@@ -28,5 +28,5 @@ jobs:
       if: type = push AND branch = master
       env:
         - SERVICE_PATH="calc"
-        - STAGE_NAME=prod
+        - STAGE_NAME=dev
         - *PRODUCTION_ENV
